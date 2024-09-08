@@ -1,0 +1,211 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Jhon Samuel\\source\\repos\\WasteNOTT\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2F4225D0-541E-481F-B492-85733CE353B2}|First.EntityFramework\\First.EntityFramework.csproj|c:\\users\\jhon samuel\\source\\repos\\wastenott\\first.entityframework\\firstdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F4225D0-541E-481F-B492-85733CE353B2}|First.EntityFramework\\First.EntityFramework.csproj|solutionrelative:first.entityframework\\firstdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{438479C7-0590-4C01-BC64-AFFA3763392D}|First.Domain\\First.Domain.csproj|c:\\users\\jhon samuel\\source\\repos\\wastenott\\first.domain\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{438479C7-0590-4C01-BC64-AFFA3763392D}|First.Domain\\First.Domain.csproj|solutionrelative:first.domain\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{438479C7-0590-4C01-BC64-AFFA3763392D}|First.Domain\\First.Domain.csproj|c:\\users\\jhon samuel\\source\\repos\\wastenott\\first.domain\\models\\orderdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{438479C7-0590-4C01-BC64-AFFA3763392D}|First.Domain\\First.Domain.csproj|solutionrelative:first.domain\\models\\orderdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{438479C7-0590-4C01-BC64-AFFA3763392D}|First.Domain\\First.Domain.csproj|c:\\users\\jhon samuel\\source\\repos\\wastenott\\first.domain\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{438479C7-0590-4C01-BC64-AFFA3763392D}|First.Domain\\First.Domain.csproj|solutionrelative:first.domain\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{438479C7-0590-4C01-BC64-AFFA3763392D}|First.Domain\\First.Domain.csproj|c:\\users\\jhon samuel\\source\\repos\\wastenott\\first.domain\\models\\seller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{438479C7-0590-4C01-BC64-AFFA3763392D}|First.Domain\\First.Domain.csproj|solutionrelative:first.domain\\models\\seller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{438479C7-0590-4C01-BC64-AFFA3763392D}|First.Domain\\First.Domain.csproj|c:\\users\\jhon samuel\\source\\repos\\wastenott\\first.domain\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{438479C7-0590-4C01-BC64-AFFA3763392D}|First.Domain\\First.Domain.csproj|solutionrelative:first.domain\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{438479C7-0590-4C01-BC64-AFFA3763392D}|First.Domain\\First.Domain.csproj|c:\\users\\jhon samuel\\source\\repos\\wastenott\\first.domain\\models\\shippinginfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{438479C7-0590-4C01-BC64-AFFA3763392D}|First.Domain\\First.Domain.csproj|solutionrelative:first.domain\\models\\shippinginfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Jhon Samuel\\source\\repos\\WasteNOTT\\First.EntityFramework\\Migrations\\20240905064308_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:First.EntityFramework\\Migrations\\20240905064308_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Jhon Samuel\\source\\repos\\WasteNOTT\\First.EntityFramework\\Migrations\\20240905063824_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:First.EntityFramework\\Migrations\\20240905063824_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{438479C7-0590-4C01-BC64-AFFA3763392D}|First.Domain\\First.Domain.csproj|c:\\users\\jhon samuel\\source\\repos\\wastenott\\first.domain\\services\\idataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{438479C7-0590-4C01-BC64-AFFA3763392D}|First.Domain\\First.Domain.csproj|solutionrelative:first.domain\\services\\idataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{438479C7-0590-4C01-BC64-AFFA3763392D}|First.Domain\\First.Domain.csproj|c:\\users\\jhon samuel\\source\\repos\\wastenott\\first.domain\\models\\userinneed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{438479C7-0590-4C01-BC64-AFFA3763392D}|First.Domain\\First.Domain.csproj|solutionrelative:first.domain\\models\\userinneed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "20240905064308_initial.cs",
+              "DocumentMoniker": "C:\\Users\\Jhon Samuel\\source\\repos\\WasteNOTT\\First.EntityFramework\\Migrations\\20240905064308_initial.cs",
+              "RelativeDocumentMoniker": "First.EntityFramework\\Migrations\\20240905064308_initial.cs",
+              "ToolTip": "C:\\Users\\Jhon Samuel\\source\\repos\\WasteNOTT\\First.EntityFramework\\Migrations\\20240905064308_initial.cs",
+              "RelativeToolTip": "First.EntityFramework\\Migrations\\20240905064308_initial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-05T06:43:08.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "20240905063824_initial.cs",
+              "DocumentMoniker": "C:\\Users\\Jhon Samuel\\source\\repos\\WasteNOTT\\First.EntityFramework\\Migrations\\20240905063824_initial.cs",
+              "RelativeDocumentMoniker": "First.EntityFramework\\Migrations\\20240905063824_initial.cs",
+              "ToolTip": "C:\\Users\\Jhon Samuel\\source\\repos\\WasteNOTT\\First.EntityFramework\\Migrations\\20240905063824_initial.cs",
+              "RelativeToolTip": "First.EntityFramework\\Migrations\\20240905063824_initial.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBkAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-05T06:38:25.269Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Jhon Samuel\\source\\repos\\WasteNOTT\\First.Domain\\Models\\User.cs",
+              "RelativeDocumentMoniker": "First.Domain\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\Jhon Samuel\\source\\repos\\WasteNOTT\\First.Domain\\Models\\User.cs",
+              "RelativeToolTip": "First.Domain\\Models\\User.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T07:28:10.065Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IDataService.cs",
+              "DocumentMoniker": "C:\\Users\\Jhon Samuel\\source\\repos\\WasteNOTT\\First.Domain\\Services\\IDataService.cs",
+              "RelativeDocumentMoniker": "First.Domain\\Services\\IDataService.cs",
+              "ToolTip": "C:\\Users\\Jhon Samuel\\source\\repos\\WasteNOTT\\First.Domain\\Services\\IDataService.cs",
+              "RelativeToolTip": "First.Domain\\Services\\IDataService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T09:13:04.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\Jhon Samuel\\source\\repos\\WasteNOTT\\First.Domain\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "First.Domain\\Models\\Order.cs",
+              "ToolTip": "C:\\Users\\Jhon Samuel\\source\\repos\\WasteNOTT\\First.Domain\\Models\\Order.cs",
+              "RelativeToolTip": "First.Domain\\Models\\Order.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T07:28:23.054Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FirstDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Jhon Samuel\\source\\repos\\WasteNOTT\\First.EntityFramework\\FirstDbContext.cs",
+              "RelativeDocumentMoniker": "First.EntityFramework\\FirstDbContext.cs",
+              "ToolTip": "C:\\Users\\Jhon Samuel\\source\\repos\\WasteNOTT\\First.EntityFramework\\FirstDbContext.cs*",
+              "RelativeToolTip": "First.EntityFramework\\FirstDbContext.cs*",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABgAAACNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T09:24:07.377Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Seller.cs",
+              "DocumentMoniker": "C:\\Users\\Jhon Samuel\\source\\repos\\WasteNOTT\\First.Domain\\Models\\Seller.cs",
+              "RelativeDocumentMoniker": "First.Domain\\Models\\Seller.cs",
+              "ToolTip": "C:\\Users\\Jhon Samuel\\source\\repos\\WasteNOTT\\First.Domain\\Models\\Seller.cs",
+              "RelativeToolTip": "First.Domain\\Models\\Seller.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-05T05:40:29.963Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrderDetails.cs",
+              "DocumentMoniker": "C:\\Users\\Jhon Samuel\\source\\repos\\WasteNOTT\\First.Domain\\Models\\OrderDetails.cs",
+              "RelativeDocumentMoniker": "First.Domain\\Models\\OrderDetails.cs",
+              "ToolTip": "C:\\Users\\Jhon Samuel\\source\\repos\\WasteNOTT\\First.Domain\\Models\\OrderDetails.cs",
+              "RelativeToolTip": "First.Domain\\Models\\OrderDetails.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T07:29:11.854Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UserInNeed.cs",
+              "DocumentMoniker": "C:\\Users\\Jhon Samuel\\source\\repos\\WasteNOTT\\First.Domain\\Models\\UserInNeed.cs",
+              "RelativeDocumentMoniker": "First.Domain\\Models\\UserInNeed.cs",
+              "ToolTip": "C:\\Users\\Jhon Samuel\\source\\repos\\WasteNOTT\\First.Domain\\Models\\UserInNeed.cs",
+              "RelativeToolTip": "First.Domain\\Models\\UserInNeed.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-05T05:29:01.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ShippingInfo.cs",
+              "DocumentMoniker": "C:\\Users\\Jhon Samuel\\source\\repos\\WasteNOTT\\First.Domain\\Models\\ShippingInfo.cs",
+              "RelativeDocumentMoniker": "First.Domain\\Models\\ShippingInfo.cs",
+              "ToolTip": "C:\\Users\\Jhon Samuel\\source\\repos\\WasteNOTT\\First.Domain\\Models\\ShippingInfo.cs",
+              "RelativeToolTip": "First.Domain\\Models\\ShippingInfo.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T07:29:22.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\Jhon Samuel\\source\\repos\\WasteNOTT\\First.Domain\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "First.Domain\\Models\\Product.cs",
+              "ToolTip": "C:\\Users\\Jhon Samuel\\source\\repos\\WasteNOTT\\First.Domain\\Models\\Product.cs",
+              "RelativeToolTip": "First.Domain\\Models\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-02T05:09:17.863Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

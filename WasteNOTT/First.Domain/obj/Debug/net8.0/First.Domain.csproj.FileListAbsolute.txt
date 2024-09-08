@@ -1,0 +1,11 @@
+C:\Users\Jhon Samuel\source\repos\WasteNOTT\First.Domain\bin\Debug\net8.0\First.Domain.deps.json
+C:\Users\Jhon Samuel\source\repos\WasteNOTT\First.Domain\bin\Debug\net8.0\First.Domain.dll
+C:\Users\Jhon Samuel\source\repos\WasteNOTT\First.Domain\bin\Debug\net8.0\First.Domain.pdb
+C:\Users\Jhon Samuel\source\repos\WasteNOTT\First.Domain\obj\Debug\net8.0\First.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jhon Samuel\source\repos\WasteNOTT\First.Domain\obj\Debug\net8.0\First.Domain.AssemblyInfoInputs.cache
+C:\Users\Jhon Samuel\source\repos\WasteNOTT\First.Domain\obj\Debug\net8.0\First.Domain.AssemblyInfo.cs
+C:\Users\Jhon Samuel\source\repos\WasteNOTT\First.Domain\obj\Debug\net8.0\First.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Jhon Samuel\source\repos\WasteNOTT\First.Domain\obj\Debug\net8.0\First.Domain.dll
+C:\Users\Jhon Samuel\source\repos\WasteNOTT\First.Domain\obj\Debug\net8.0\refint\First.Domain.dll
+C:\Users\Jhon Samuel\source\repos\WasteNOTT\First.Domain\obj\Debug\net8.0\First.Domain.pdb
+C:\Users\Jhon Samuel\source\repos\WasteNOTT\First.Domain\obj\Debug\net8.0\ref\First.Domain.dll
