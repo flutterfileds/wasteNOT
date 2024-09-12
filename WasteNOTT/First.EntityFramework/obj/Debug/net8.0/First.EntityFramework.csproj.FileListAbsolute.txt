@@ -1,0 +1,17 @@
+C:\Users\Jhon Samuel\source\repos\WasteNOTT\First.EntityFramework\bin\Debug\net8.0\First.EntityFramework.deps.json
+C:\Users\Jhon Samuel\source\repos\WasteNOTT\First.EntityFramework\bin\Debug\net8.0\First.EntityFramework.runtimeconfig.json
+C:\Users\Jhon Samuel\source\repos\WasteNOTT\First.EntityFramework\bin\Debug\net8.0\First.EntityFramework.dll
+C:\Users\Jhon Samuel\source\repos\WasteNOTT\First.EntityFramework\bin\Debug\net8.0\First.EntityFramework.pdb
+C:\Users\Jhon Samuel\source\repos\WasteNOTT\First.EntityFramework\bin\Debug\net8.0\First.Domain.dll
+C:\Users\Jhon Samuel\source\repos\WasteNOTT\First.EntityFramework\bin\Debug\net8.0\First.Domain.pdb
+C:\Users\Jhon Samuel\source\repos\WasteNOTT\First.EntityFramework\obj\Debug\net8.0\First.EntityFramework.csproj.AssemblyReference.cache
+C:\Users\Jhon Samuel\source\repos\WasteNOTT\First.EntityFramework\obj\Debug\net8.0\First.EntityFramework.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jhon Samuel\source\repos\WasteNOTT\First.EntityFramework\obj\Debug\net8.0\First.EntityFramework.AssemblyInfoInputs.cache
+C:\Users\Jhon Samuel\source\repos\WasteNOTT\First.EntityFramework\obj\Debug\net8.0\First.EntityFramework.AssemblyInfo.cs
+C:\Users\Jhon Samuel\source\repos\WasteNOTT\First.EntityFramework\obj\Debug\net8.0\First.EntityFramework.csproj.CoreCompileInputs.cache
+C:\Users\Jhon Samuel\source\repos\WasteNOTT\First.EntityFramework\obj\Debug\net8.0\First.En.96F60D66.Up2Date
+C:\Users\Jhon Samuel\source\repos\WasteNOTT\First.EntityFramework\obj\Debug\net8.0\First.EntityFramework.dll
+C:\Users\Jhon Samuel\source\repos\WasteNOTT\First.EntityFramework\obj\Debug\net8.0\refint\First.EntityFramework.dll
+C:\Users\Jhon Samuel\source\repos\WasteNOTT\First.EntityFramework\obj\Debug\net8.0\First.EntityFramework.pdb
+C:\Users\Jhon Samuel\source\repos\WasteNOTT\First.EntityFramework\obj\Debug\net8.0\First.EntityFramework.genruntimeconfig.cache
+C:\Users\Jhon Samuel\source\repos\WasteNOTT\First.EntityFramework\obj\Debug\net8.0\ref\First.EntityFramework.dll
