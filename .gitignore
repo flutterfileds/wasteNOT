@@ -1,0 +1,23 @@
+# Ignore Visual Studio temporary files, build results, and user-specific files
+.vs/
+bin/
+obj/
+
+# Ignore user-specific project files
+*.csproj.user
+
+# Ignore build output
+*.exe
+*.dll
+
+# Ignore Visual Studio Code workspace settings
+.vscode/
+
+# Ignore temporary files
+*.log
+*.temp
+*.TMP
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
