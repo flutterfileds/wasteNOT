@@ -10,32 +10,34 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace wasteNOT
+namespace wasteNOT.Pages
 {
     /// <summary>
-    /// Interaction logic for SignUpWindow.xaml
+    /// Interaction logic for Home.xaml
     /// </summary>
-    public partial class SignUpWindow : Window
+    public partial class Home : Page
     {
-        public SignUpWindow()
+        public Home()
         {
             InitializeComponent();
         }
 
-        private void btnToLogin_Click(object sender, RoutedEventArgs e)
+        private void btnSearch_Click(object sender, RoutedEventArgs e)
         {
-            // Create an instance of the Login window
-            LoginWindow loginWindow = new LoginWindow();
 
-            // Show the Login window
-            loginWindow.Show();
+        }
 
-            // Close the current MainWindow
-            this.Close();
+        private void btnAccount_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
-
-
 }

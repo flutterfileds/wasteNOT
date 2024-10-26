@@ -49,22 +49,43 @@ namespace wasteNOT
 
         private void txtPassword_PasswordChanged(object sender, TextChangedEventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtPassword.Password) && txtPassword.Password.Length > 0)
+            if (!string.IsNullOrEmpty(txtPassword.Text) && txtPassword.Text.Length > 0)
             {
-                textEmail.Visibility = Visibility.Collapsed;
+                textPassword.Visibility = Visibility.Collapsed;
             }
             else
             {
-                textEmail.Visibility = Visibility.Visible;
+                textPassword.Visibility = Visibility.Visible;
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             if(!string.IsNullOrEmpty(txtEmail.Text) && !string.IsNullOrEmpty(txtPassword.Text))
             {
                 MessageBox.Show("Succesfully Login");
+
+                // Create an instance of MainWindow
+                MainWindow mainWindow = new MainWindow();
+
+                // Show the new window
+                mainWindow.Show();
+
+                // Optionally, close the current window
+                this.Close();
             }
+        }
+
+        private void btnToSignup_Click(object sender, RoutedEventArgs e)
+        {
+            // Create an instance of SignUpWindow
+            SignUpWindow signUpWindow = new SignUpWindow();
+
+            // Show the new window
+            signUpWindow.Show();
+
+            // Optionally, close the current window
+            this.Close();
         }
     }
 }

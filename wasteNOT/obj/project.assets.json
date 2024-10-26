@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jovit\\Documents\\wasteNOT\\wasteNOT.csproj",
+      "projectUniqueName": "C:\\Users\\jovit\\wasteNOT\\wasteNOT\\wasteNOT.csproj",
       "projectName": "wasteNOT",
-      "projectPath": "C:\\Users\\jovit\\Documents\\wasteNOT\\wasteNOT.csproj",
+      "projectPath": "C:\\Users\\jovit\\wasteNOT\\wasteNOT\\wasteNOT.csproj",
       "packagesPath": "C:\\Users\\jovit\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jovit\\Documents\\wasteNOT\\obj\\",
+      "outputPath": "C:\\Users\\jovit\\wasteNOT\\wasteNOT\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jovit\\AppData\\Roaming\\NuGet\\NuGet.Config",

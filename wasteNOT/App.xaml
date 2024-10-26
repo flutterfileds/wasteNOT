@@ -12,12 +12,37 @@
             <Setter Property="Foreground" Value="#F6F4FA"/>
         </Style>
 
+        <Style x:Key="header1Text" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="34"/>
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="TextAlignment" Value="Left"/>
+            <Setter Property="Foreground" Value="#0E78b5"/>
+        </Style>
+
+        <Style x:Key="header2Text" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="28"/>
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="TextAlignment" Value="Left"/>
+            <Setter Property="Foreground" Value="#0E78b5"/>
+        </Style>
+
         <Style x:Key="normalText" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="Normal"/>
+            <Setter Property="Foreground" Value="#6D7A8C"/>
+        </Style>
+
+        <Style x:Key="mediumText" TargetType="TextBlock">
             <Setter Property="FontSize" Value="16"/>
-            <Setter Property="FontWeight" Value="Regular"/>
-            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="TextAlignment" Value="Center"/>
             <Setter Property="Foreground" Value="#F6F4FA"/>
+        </Style>
+
+        <Style x:Key="formText" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Foreground" Value="#6D7A8C" />
         </Style>
 
         <Style x:Key="button" TargetType="Button">
@@ -58,8 +83,8 @@
 
         <Style x:Key="textBox" TargetType="Control">
             <Setter Property="FontSize" Value="14" />
+            <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="Grid.Column" Value="1" />
-            <Setter Property="Margin" Value="10 0 0 0" />
             <Setter Property="Foreground" Value="#878787" />
             <Setter Property="BorderBrush" Value="Transparent" />
             <Setter Property="BorderThickness" Value="0" />
@@ -69,7 +94,7 @@
             <Setter Property="FontSize" Value="18" />
             <Setter Property="FontWeight" Value="Bold" />
             <Setter Property="Margin" Value="0 20 0 0" />
-            <Setter Property="Width" Value="200" />
+            <Setter Property="Width" Value="150" />
             <Setter Property="Background" Value="#0E78b5" />
             <Setter Property="Foreground" Value="#FDFEFE" />
             <Setter Property="FocusVisualStyle" Value="{x:Null}" />
@@ -84,16 +109,128 @@
             </Setter>
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="#0E78b5" />
+                    <Setter Property="Background" Value="#1188CD" />
                     <Setter Property="Foreground" Value="White" />
                 </Trigger>
                 <Trigger Property="IsMouseCaptured" Value="True">
-                    <Setter Property="Background" Value="#0E78b9" />
+                    <Setter Property="Background" Value="#1188CD" />
                     <Setter Property="Foreground" Value="White" />
                 </Trigger>
             </Style.Triggers>
         </Style>
-        
 
+        <Style x:Key="saveButton" TargetType="{x:Type Button}">
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Width" Value="150" />
+            <Setter Property="Height" Value="50" />
+            <Setter Property="Background" Value="#0E78b5" />
+            <Setter Property="Foreground" Value="#FDFEFE" />
+            <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="25" BorderBrush="#0E78b5" Padding="15" BorderThickness="1">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#1188CD" />
+                    <Setter Property="Foreground" Value="White" />
+                </Trigger>
+                <Trigger Property="IsMouseCaptured" Value="True">
+                    <Setter Property="Background" Value="#1188CD" />
+                    <Setter Property="Foreground" Value="White" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="orderButton" TargetType="{x:Type Button}">
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Height" Value="50" />
+            <Setter Property="Background" Value="#0E78b5" />
+            <Setter Property="Foreground" Value="#FDFEFE" />
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#1188CD" />
+                    <Setter Property="Foreground" Value="White" />
+                </Trigger>
+                <Trigger Property="IsMouseCaptured" Value="True">
+                    <Setter Property="Background" Value="#1188CD" />
+                    <Setter Property="Foreground" Value="White" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="filterButton" TargetType="{x:Type Button}">
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Margin" Value="5 0" />
+            <Setter Property="Width" Value="100" />
+            <Setter Property="Background" Value="White" />
+            <Setter Property="Foreground" Value="#0E78b5" />
+            <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="5" BorderBrush="#FFFF" Padding="5" BorderThickness="1">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#0E78b5"/>
+                    <Setter Property="Foreground" Value="White"/>
+                </Trigger>
+                <Trigger Property="IsMouseCaptured" Value="True">
+                    <Setter Property="Background" Value="#0E78b5"/>
+                    <Setter Property="Foreground" Value="White"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="ButtonCRM" TargetType="Button">
+            <Setter Property="Width" Value="30"/>
+            <Setter Property="Height" Value="20"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Background" Value="Transparent"/>
+        </Style>
+
+        <DataTemplate x:Key="ProductItemTemplate">
+            <Border Background="#E6F0F8" CornerRadius="8" Margin="0,0,0,10" Padding="10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Product Image -->
+                    <Image Source="{Binding ImageSource}" Width="60" Height="60" Grid.Column="0" Margin="0,0,10,0"/>
+
+                    <!-- Product Details -->
+                    <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                        <TextBlock Text="{Binding ProductName}" FontWeight="Bold" FontSize="16"/>
+                        <TextBlock Text="{Binding StoreName}" Foreground="Gray"/>
+                        <TextBlock Text="{Binding EstimatedDelivery}" Foreground="Gray" Margin="0,10,0,0"/>
+                    </StackPanel>
+
+                    <!-- Price and Status -->
+                    <StackPanel Grid.Column="2" VerticalAlignment="Center">
+                        <TextBlock Text="Total Order" Foreground="Gray" HorizontalAlignment="Right"/>
+                        <TextBlock Text="{Binding Price}" FontWeight="Bold" Foreground="#2477D6" HorizontalAlignment="Right"/>
+                        <Button Content="{Binding Status}" Padding="5,2" Margin="0,10,0,0"
+                            Background="Gray" Foreground="White" Width="80" HorizontalAlignment="Right"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+        </DataTemplate>
+        
     </Application.Resources>
 </Application>
