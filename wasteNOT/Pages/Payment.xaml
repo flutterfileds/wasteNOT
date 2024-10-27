@@ -1,0 +1,88 @@
+﻿<Page x:Class="wasteNOT.Pages.Payment"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:wasteNOT.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="800" Background="#F2F4F6"
+      Title="Payment">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="4.5*"/>
+            <RowDefinition Height="0.75*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Payment" Style="{StaticResource header1Text}" VerticalAlignment="Center" Foreground="#0E78b5" Margin="20 0 20 0"/>
+
+        <Border Grid.Row="1" Background="#E4F0F7" Height="360" Width="600" CornerRadius="10">
+            <StackPanel Orientation="Vertical" >
+                <StackPanel Orientation="Horizontal" Height="45">
+                    <StackPanel Width="200">
+                        <TextBlock Text="Total Payment" TextAlignment="Left" Margin="20" Style="{StaticResource mediumText}" Foreground="Black"/>
+                    </StackPanel>
+                    
+                    <StackPanel Width="400">
+                        <TextBlock Text="Rp123.000" TextAlignment="Right" Style="{StaticResource mediumText}" Foreground="#FF0E78B5" Margin="20"/>
+                    </StackPanel>
+                </StackPanel>
+                
+                <StackPanel Orientation="Horizontal" Height="50">
+                    <StackPanel Width="200">
+                        <TextBlock Text="Pay In" TextAlignment="Left" Margin="20" Style="{StaticResource mediumText}" Foreground="Black"/>
+                    </StackPanel>
+                    
+                    <StackPanel Orientation="Vertical" Width="400" HorizontalAlignment="Right">
+                        <TextBlock Text="23 hours 59 minutes 30 seconds" 
+                                   TextAlignment="Right" Style="{StaticResource mediumText}" Foreground="#FF0E78B5" Margin="10"/>
+                        <TextBlock Text="Due on 20 Oct 2024 17:28" 
+                                   TextAlignment="Right" VerticalAlignment="Center" Margin="10 -10" Style="{StaticResource SmallText}"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <Canvas Height="1" Width="600" Margin="0 10 0 0">
+                    <Line X1="0" Y1="0" X2="600" Y2="0" Stroke="Black" StrokeThickness="0.5" />
+                </Canvas>
+                
+                <StackPanel Orientation="Horizontal" Height="25" Margin="0 10">
+                    <TextBlock Text="Bank ABC" Margin="20 0" Style="{StaticResource mediumText}" Foreground="Black"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Height="20">
+                    <TextBlock Text="Account Number" Margin="40 0" Style="{StaticResource SmallText}" Foreground="Black"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Height="30">
+                    <TextBlock Text="0000 0000 0000 0000" 
+                               Margin="40 0" VerticalAlignment="Center" Style="{StaticResource SmallText}" Foreground="#FF0E78B5"/>
+                    <Button Content="COPY" Height="20" Width="45" BorderBrush="Transparent" FontWeight="Medium" Foreground="#FF8C8B8B" />
+                </StackPanel>
+
+                <StackPanel>
+                    <TextBlock Text="Verification process takes less than 10 minutes after a successful payment." 
+                               TextAlignment="Left" Margin="40 0" Style="{StaticResource SmallText}"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Height="25" Margin="0 10 0 0">
+                    <TextBlock Text="Transfer Instructions" Margin="20 0" TextAlignment="Center" Style="{StaticResource mediumText}" Foreground="Black"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Height="100" Margin="20 0">
+                    <TextBlock Text="1. Select Transfer > Virtual Account Billing." 
+                               TextAlignment="Left" TextWrapping="WrapWithOverflow" Style="{StaticResource SmallText}"/>
+                    <TextBlock Text="2. Select Debit Account > Enter the Virtual Account number 8806 085219546759 in the New Input menu."
+                               TextAlignment="Left" HorizontalAlignment="Stretch" TextWrapping="WrapWithOverflow" Style="{StaticResource SmallText}"/>
+                    <TextBlock Text="3. The amount to be paid will appear on the confirmation screen." 
+                               TextAlignment="Left" TextWrapping="WrapWithOverflow" Style="{StaticResource SmallText}"/>
+                    <TextBlock Text="4. Review the information displayed on the screen. If everything is correct, enter your transaction password and select Proceed." 
+                               TextAlignment="Left" HorizontalAlignment="Stretch" TextWrapping="WrapWithOverflow" Style="{StaticResource SmallText}" />
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <Button Grid.Row="2" x:Name="btnOKPayment" Content="OK" Style="{StaticResource saveButton}" Click="btnOKPayment_Click" />
+
+    </Grid>
+</Page>

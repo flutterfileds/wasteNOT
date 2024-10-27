@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace wasteNOT
@@ -41,7 +42,7 @@ namespace wasteNOT
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-
+            PagesNavigation.Navigate(new System.Uri("Pages/Products.xaml", UriKind.RelativeOrAbsolute));
         }
 
         private void btnSettings_Click(object sender, RoutedEventArgs e)

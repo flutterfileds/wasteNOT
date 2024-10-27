@@ -37,7 +37,7 @@ namespace wasteNOT
 
         private void btnAccount_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new Uri("Pages/Settings.xaml", UriKind.Relative));
         }
 
         private void textSearch_MouseDown(object sender, MouseButtonEventArgs e)

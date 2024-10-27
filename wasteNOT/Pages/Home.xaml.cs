@@ -32,7 +32,7 @@ namespace wasteNOT.Pages
 
         private void btnAccount_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new Uri("Pages/Settings.xaml", UriKind.Relative));
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

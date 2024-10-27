@@ -16,18 +16,18 @@ using System.Windows.Shapes;
 namespace wasteNOT.Pages
 {
     /// <summary>
-    /// Interaction logic for Cart.xaml
+    /// Interaction logic for Payment.xaml
     /// </summary>
-    public partial class Cart : Page
+    public partial class Payment : Page
     {
-        public Cart()
+        public Payment()
         {
             InitializeComponent();
         }
 
-        private void btnOrder_Click(object sender, RoutedEventArgs e)
+        private void btnOKPayment_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("Pages/Payment.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("Pages/Shipping.xaml", UriKind.Relative));
         }
     }
 }

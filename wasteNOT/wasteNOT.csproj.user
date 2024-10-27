@@ -10,6 +10,9 @@
     <Compile Update="Pages\Cart.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Pages\Confirmed.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Pages\History.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -19,7 +22,16 @@
     <Compile Update="Pages\Home.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Pages\Payment.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\Products.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Pages\Settings.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\Shipping.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="SignUpWindow.xaml.cs">
@@ -28,6 +40,9 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="Pages\Cart.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Confirmed.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\History.xaml">
@@ -42,7 +57,16 @@
     <Page Update="Pages\Home.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Pages\Payment.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Products.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Pages\Settings.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Shipping.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="SignUpWindow.xaml">

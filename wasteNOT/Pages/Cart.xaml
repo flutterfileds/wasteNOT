@@ -32,7 +32,7 @@
             
             <TextBlock Text="Summary" Style="{StaticResource header2Text}" Foreground="#0D1625" Margin="10" TextAlignment="Center"/>
 
-            <Button x:Name="btnOrder" Grid.Row="2" Content="Proceed Order" Style="{StaticResource orderButton}"/>
+            <Button x:Name="btnOrder" Grid.Row="2" Content="Proceed Order" VerticalAlignment="Bottom" Style="{StaticResource orderButton}" Click="btnOrder_Click"/>
         </Grid>
     </Grid>
 </Page>

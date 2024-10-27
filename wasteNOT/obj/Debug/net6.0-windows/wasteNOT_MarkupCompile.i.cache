@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\jovit\wasteNOT\wasteNOT\App.xaml
-7-829046964
+111494880493
 
-11470500104
+15-363699037
 194726069201
-LoginWindow.xaml;MainWindow.xaml;Pages\Cart.xaml;Pages\History.xaml;Pages\Home.xaml;Pages\Settings.xaml;SignUpWindow.xaml;
+LoginWindow.xaml;MainWindow.xaml;Pages\Cart.xaml;Pages\Confirmed.xaml;Pages\History.xaml;Pages\Home.xaml;Pages\Payment.xaml;Pages\Products.xaml;Pages\Settings.xaml;Pages\Shipping.xaml;SignUpWindow.xaml;
 
 True
 

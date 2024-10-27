@@ -14,7 +14,7 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <Border CornerRadius="8 0 0 8" Background="#0E78B5">
+            <Border Background="#0E78B5">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="75"/>

@@ -39,6 +39,13 @@
             <Setter Property="Foreground" Value="#F6F4FA"/>
         </Style>
 
+        <Style x:Key="SmallText" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="#6D7A8C"/>
+        </Style>
+
         <Style x:Key="formText" TargetType="TextBlock">
             <Setter Property="FontSize" Value="16" />
             <Setter Property="FontWeight" Value="Bold" />
@@ -122,7 +129,7 @@
         <Style x:Key="saveButton" TargetType="{x:Type Button}">
             <Setter Property="FontSize" Value="14" />
             <Setter Property="FontWeight" Value="Bold" />
-            <Setter Property="Width" Value="150" />
+            <Setter Property="Width" Value="200" />
             <Setter Property="Height" Value="50" />
             <Setter Property="Background" Value="#0E78b5" />
             <Setter Property="Foreground" Value="#FDFEFE" />
@@ -130,12 +137,30 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Button}">
-                        <Border Background="{TemplateBinding Background}" CornerRadius="25" BorderBrush="#0E78b5" Padding="15" BorderThickness="1">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="20" BorderBrush="#0E78b5" Padding="15" BorderThickness="1">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                         </Border>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#4B9BC9" />
+                    <Setter Property="Foreground" Value="White" />
+                </Trigger>
+                <Trigger Property="IsMouseCaptured" Value="True">
+                    <Setter Property="Background" Value="#4B9BC9" />
+                    <Setter Property="Foreground" Value="White" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="orderButton" TargetType="{x:Type Button}">
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Height" Value="50" />
+            <Setter Property="Background" Value="#0E78b5" />
+            <Setter Property="Foreground" Value="#FDFEFE" />
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
                     <Setter Property="Background" Value="#1188CD" />
@@ -148,9 +173,27 @@
             </Style.Triggers>
         </Style>
 
-        <Style x:Key="orderButton" TargetType="{x:Type Button}">
+        <Style x:Key="cvButton" TargetType="{x:Type Button}">
             <Setter Property="FontSize" Value="18" />
-            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="FontWeight" Value="Medium" />
+            <Setter Property="Height" Value="50" />
+            <Setter Property="Background" Value="#F4F6FA" />
+            <Setter Property="Foreground" Value="#0D1625" />
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#6D7A8C" />
+                    <Setter Property="Foreground" Value="#0D1625" />
+                </Trigger>
+                <Trigger Property="IsMouseCaptured" Value="True">
+                    <Setter Property="Background" Value="#6D7A8C" />
+                    <Setter Property="Foreground" Value="#0D1625" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        
+        <Style x:Key="chButton" TargetType="{x:Type Button}">
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="FontWeight" Value="Medium" />
             <Setter Property="Height" Value="50" />
             <Setter Property="Background" Value="#0E78b5" />
             <Setter Property="Foreground" Value="#FDFEFE" />
