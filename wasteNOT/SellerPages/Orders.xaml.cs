@@ -13,16 +13,21 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace wasteNOT.Pages
+namespace wasteNOT.SellerPages
 {
     /// <summary>
-    /// Interaction logic for Products.xaml
+    /// Interaction logic for Orders.xaml
     /// </summary>
-    public partial class Products : Page
+    public partial class Orders : Page
     {
-        public Products()
+        public Orders()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

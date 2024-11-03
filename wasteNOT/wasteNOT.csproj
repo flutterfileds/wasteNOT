@@ -16,6 +16,8 @@
     <None Remove="Icons\log out.png" />
     <None Remove="Icons\search.png" />
     <None Remove="Icons\settings.png" />
+    <None Remove="Images\Profile.png" />
+    <None Remove="Images\wasteNOTlogo2.png" />
     <None Remove="wastenot logo.png" />
   </ItemGroup>
 
@@ -44,7 +46,13 @@
     <Resource Include="Icons\settings.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\Profile.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\wastenot logo.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\wasteNOTlogo2.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

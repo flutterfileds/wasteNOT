@@ -42,7 +42,14 @@ namespace wasteNOT
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            PagesNavigation.Navigate(new System.Uri("Pages/Products.xaml", UriKind.RelativeOrAbsolute));
+            // Create an instance of SellerWindow
+            SellerWindow sellerWindow = new SellerWindow();
+
+            // Show the new window
+            sellerWindow.Show();
+
+            // Close the current window
+            this.Close();
         }
 
         private void btnSettings_Click(object sender, RoutedEventArgs e)

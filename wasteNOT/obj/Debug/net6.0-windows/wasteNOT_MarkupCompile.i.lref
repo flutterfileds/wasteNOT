@@ -1,14 +1,5 @@
 ﻿
-FC:\Users\jovit\wasteNOT\wasteNOT\App.xaml;;
-FC:\Users\jovit\wasteNOT\wasteNOT\LoginWindow.xaml;;
-FC:\Users\jovit\wasteNOT\wasteNOT\MainWindow.xaml;;
-FC:\Users\jovit\wasteNOT\wasteNOT\Pages\Cart.xaml;;
-FC:\Users\jovit\wasteNOT\wasteNOT\Pages\Confirmed.xaml;;
-FC:\Users\jovit\wasteNOT\wasteNOT\Pages\History.xaml;;
-FC:\Users\jovit\wasteNOT\wasteNOT\Pages\Home.xaml;;
-FC:\Users\jovit\wasteNOT\wasteNOT\Pages\Payment.xaml;;
-FC:\Users\jovit\wasteNOT\wasteNOT\Pages\Products.xaml;;
-FC:\Users\jovit\wasteNOT\wasteNOT\Pages\Settings.xaml;;
-FC:\Users\jovit\wasteNOT\wasteNOT\Pages\Shipping.xaml;;
-FC:\Users\jovit\wasteNOT\wasteNOT\SignUpWindow.xaml;;
+
+FC:\Users\jovit\wasteNOT\wasteNOT\SellerPages\AddProduct.xaml;;
+FC:\Users\jovit\wasteNOT\wasteNOT\SellerPages\Orders.xaml;;
 
