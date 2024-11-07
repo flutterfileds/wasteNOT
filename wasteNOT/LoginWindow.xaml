@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:wasteNOT"
         mc:Ignorable="d" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Background="Transparent"
         Title="LoginWindow" Height="500" Width="800">
-    
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -25,9 +25,8 @@
 
         <Border Background="#F4F6fA" Grid.Column="1">
             <StackPanel VerticalAlignment="Center">
-                <TextBlock Text="Login to App" Style="{StaticResource titleText}" Foreground="#02263B"/>
-                <StackPanel Orientation="Horizontal" Margin="0 20" HorizontalAlignment="Center"/>
-
+                <TextBlock Text="Login to App" Style="{StaticResource titleText}" Margin="20" Foreground="#02263B"/>
+                
                 <Border BorderBrush="#ACB0AF" BorderThickness="1" Margin="70 7" CornerRadius="5">
                     <Grid Margin="7 9">
                         <Grid.ColumnDefinitions>
@@ -52,7 +51,17 @@
                     </Grid>
                 </Border>
 
-                <Button Content="Login" Click="Button_Click" Style="{StaticResource mainButton}"/>
+                <Button x:Name="btnLogin" Content="Login" Click="btnLogin_Click" Style="{StaticResource mainButton}"/>
+
+                <Grid Margin="50" Width="250" VerticalAlignment="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2.75*"/>
+                        <ColumnDefinition Width="1.25*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Grid.Column="0" Text="Dont have an account?" FontWeight="Medium" FontSize="14" TextAlignment="Center"/>
+                    <Button x:Name="btnToSignup" Grid.Column="1" Content="Sign up" Click="btnToSignup_Click" Foreground="#0E78B5" FontWeight="Bold" FontSize="14" Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Left"/>
+                </Grid>
             </StackPanel>
         </Border>
     </Grid>

@@ -1,0 +1,29 @@
+﻿<Page x:Class="wasteNOT.Pages.Confirmed"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:wasteNOT.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="800" Background="#F4F6FA"
+      Title="Confirmed">
+
+    <Grid>
+        <StackPanel VerticalAlignment="Center">
+            <Image Source="pack://application:,,,/Images/confirmed.png" Width="50" Margin="20"/>
+
+            <TextBlock Text="Order Confirmed" Style="{StaticResource header1Text}" Foreground="#0D1625" TextAlignment="Center"/>
+
+            <TextBlock Text="Thank You for Ordering! Your Order ID is #1" 
+                       FontSize="16" Foreground="#6D7A8C" TextAlignment="Center" Margin="10" />
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="20">
+                <Button x:Name="btnViewOrder" Content="View Order" Click="btnViewOrder_Click"
+                        Width="150" Margin="20" Style="{StaticResource cvButton}"/>
+                <Button x:Name="btnBack2h" Content="Back to Home" Click="btnBack2h_Click"
+                        Width="200" Margin="20" Style="{StaticResource chButton}"/>
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</Page>

@@ -10,32 +10,24 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace wasteNOT
+namespace wasteNOT.Pages
 {
     /// <summary>
-    /// Interaction logic for SignUpWindow.xaml
+    /// Interaction logic for Cart.xaml
     /// </summary>
-    public partial class SignUpWindow : Window
+    public partial class Cart : Page
     {
-        public SignUpWindow()
+        public Cart()
         {
             InitializeComponent();
         }
 
-        private void btnToLogin_Click(object sender, RoutedEventArgs e)
+        private void btnOrder_Click(object sender, RoutedEventArgs e)
         {
-            // Create an instance of the Login window
-            LoginWindow loginWindow = new LoginWindow();
-
-            // Show the Login window
-            loginWindow.Show();
-
-            // Close the current MainWindow
-            this.Close();
+            NavigationService.Navigate(new Uri("Pages/Payment.xaml", UriKind.Relative));
         }
     }
-
-
 }

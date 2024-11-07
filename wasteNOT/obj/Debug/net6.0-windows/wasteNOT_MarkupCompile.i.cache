@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\jovit\Documents\wasteNOT\obj\Debug\net6.0-windows\
+C:\Users\jovit\wasteNOT\wasteNOT\obj\Debug\net6.0-windows\
 wasteNOT
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\jovit\Documents\wasteNOT\App.xaml
-2-523032863
+C:\Users\jovit\wasteNOT\wasteNOT\App.xaml
+15-1205928243
 
-6923118506
+19-1626430173
 194726069201
-LoginWindow.xaml;SignUpWindow.xaml;
+LoginWindow.xaml;MainWindow.xaml;Pages\Cart.xaml;Pages\Confirmed.xaml;Pages\History.xaml;Pages\Home.xaml;Pages\Payment.xaml;Pages\Settings.xaml;Pages\Shipping.xaml;SellerPages\AddProduct.xaml;SellerPages\Orders.xaml;SellerPages\Products.xaml;SellerPages\Store.xaml;SellerWindow.xaml;SignUpWindow.xaml;
 
 True
 

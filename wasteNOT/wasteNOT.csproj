@@ -8,11 +8,51 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Icons\account.png" />
+    <None Remove="Icons\add.png" />
+    <None Remove="Icons\cart.png" />
+    <None Remove="Icons\history.png" />
+    <None Remove="Icons\home.png" />
+    <None Remove="Icons\log out.png" />
+    <None Remove="Icons\search.png" />
+    <None Remove="Icons\settings.png" />
+    <None Remove="Images\Profile.png" />
+    <None Remove="Images\wasteNOTlogo2.png" />
     <None Remove="wastenot logo.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Icons\account.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\add.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\cart.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\history.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\home.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\log out.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\search.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\settings.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Profile.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\wastenot logo.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\wasteNOTlogo2.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
