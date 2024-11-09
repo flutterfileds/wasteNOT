@@ -41,7 +41,8 @@
                     </Grid.ColumnDefinitions>
 
                     <Grid>
-                        <TextBox x:Name="txtSearch" Style="{StaticResource textBox}" />
+                        <TextBlock x:Name="textSearch" Text="Search" MouseDown="textSearch_MouseDown" Style="{StaticResource textHint}"/>
+                        <TextBox x:Name="txtSearch" TextChanged="txtSearch_TextChanged" Style="{StaticResource textBox}" />
                     </Grid>
 
                     <Border Grid.Column="1">

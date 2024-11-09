@@ -34,8 +34,8 @@
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
 
-                        <TextBlock x:Name="textUsername" Text="Username" Style="{StaticResource textHint}"/>
-                        <TextBox x:Name="txtUsername" Style="{StaticResource textBox}"/>
+                        <TextBlock x:Name="textUsername" Text="Username" MouseDown="textUsername_MouseDown" Style="{StaticResource textHint}"/>
+                        <TextBox x:Name="txtUsername" TextChanged="txtUsername_TextChanged" Style="{StaticResource textBox}"/>
                     </Grid>
                 </Border>
 
@@ -46,8 +46,19 @@
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
 
-                        <TextBlock x:Name="textEmail" Text="Email" Style="{StaticResource textHint}"/>
-                        <TextBox x:Name="txtEmail" Style="{StaticResource textBox}"/>
+                        <TextBlock x:Name="textPhoneNum" Text="Phone Number" MouseDown="textPhoneNum_MouseDown" Style="{StaticResource textHint}"/>
+                        <TextBox x:Name="txtPhoneNum" TextChanged="txtPhoneNum_TextChanged" Style="{StaticResource textBox}"/>
+                    </Grid>
+                </Border>
+                <Border BorderBrush="#ACB0AF" BorderThickness="1" Margin="70 7" CornerRadius="5">
+                    <Grid Margin="7 9">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock x:Name="textEmail" Text="Email" MouseDown="textEmail_MouseDown" Style="{StaticResource textHint}"/>
+                        <TextBox x:Name="txtEmail" TextChanged="txtEmail_TextChanged" Style="{StaticResource textBox}"/>
                     </Grid>
                 </Border>
 
@@ -58,8 +69,8 @@
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
 
-                        <TextBlock x:Name="textPassword" Text="Password" Style="{StaticResource textHint}"/>
-                        <TextBox x:Name="txtPassword" Style="{StaticResource textBox}"/>
+                        <TextBlock x:Name="textPassword" Text="Password" MouseDown="textPassword_MouseDown" Style="{StaticResource textHint}"/>
+                        <TextBox x:Name="txtPassword" TextChanged="txtPassword_TextChanged" Style="{StaticResource textBox}"/>
                     </Grid>
                 </Border>
 
