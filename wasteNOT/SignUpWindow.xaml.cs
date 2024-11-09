@@ -35,7 +35,74 @@ namespace wasteNOT
             // Close the current MainWindow
             this.Close();
         }
-    }
 
+        private void textEmail_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            txtEmail.Focus();
+        }
+
+        private void txtEmail_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtEmail.Text))
+            {
+                textEmail.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                textEmail.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void textPassword_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            txtPassword.Focus();
+        }
+
+        private void txtPassword_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtPassword.Text))
+            {
+                textPassword.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                textPassword.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void txtPhoneNum_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtPhoneNum.Text))
+            {
+                textPhoneNum.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                textPhoneNum.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void textPhoneNum_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            txtPhoneNum.Focus();
+        }
+
+        private void textUsername_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            txtUsername.Focus();
+        }
+
+        private void txtUsername_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtUsername.Text))
+            {
+                textUsername.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                textUsername.Visibility = Visibility.Visible;
+            }
+        }
+    }
 
 }
