@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -17,6 +19,66 @@ namespace wasteNOT
     /// <summary>
     /// Interaction logic for SignUpWindow.xaml
     /// </summary>
+    /// 
+
+    public abstract class User
+    {
+        public string Email { get; set; }
+        public string PhoneNum { get; set; }
+        public string Password { get; set; }
+        public string Name { get; set; }
+        protected readonly string connectionString = ConnectionString.GetConnectionString();
+
+        public User(string email, string phone, string name, string password)
+        {
+            Email = email.ToLower().Trim();
+            PhoneNum = phone.Trim();
+            Name = name.Trim();
+            Password = HashPassword(password);
+        }
+
+        public abstract void Insert();
+
+        protected string HashPassword(string password)
+        {
+            using (SHA256 sHA256 = SHA256.Create())
+            {
+                byte[] bytes = sHA256.ComputeHash(Encoding.UTF8.GetBytes(password));
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2"));
+                }
+
+                return builder.ToString();
+            }
+
+        }
+    }
+
+    public class AllUser : User
+    {
+        public AllUser(string email, string phonenum, string name, string password) : base(email, phonenum, name, password) { }
+
+        public override void Insert()
+        {
+            using (var connection = new NpgsqlConnection(connectionString))
+            {
+                string query = @"INSERT INTO public.""user"" (user_email, user_phone, user_name, user_password) VALUES (@Email, @Phone, @Name, @Password)";
+
+                using (var command = new NpgsqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Email", Email);
+                    command.Parameters.AddWithValue("@Phone", PhoneNum);
+                    command.Parameters.AddWithValue("@Name", Name);
+                    command.Parameters.AddWithValue("@Password", Password);
+
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+    }
     public partial class SignUpWindow : Window
     {
         public SignUpWindow()
@@ -26,6 +88,7 @@ namespace wasteNOT
 
         private void btnToLogin_Click(object sender, RoutedEventArgs e)
         {
+
             // Create an instance of the Login window
             LoginWindow loginWindow = new LoginWindow();
 
@@ -33,7 +96,8 @@ namespace wasteNOT
             loginWindow.Show();
 
             // Close the current MainWindow
-            this.Close();
+            if (this != null)
+                this.Close();
         }
 
         private void textEmail_MouseDown(object sender, MouseButtonEventArgs e)
@@ -60,7 +124,7 @@ namespace wasteNOT
 
         private void txtPassword_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtPassword.Text))
+            if (!string.IsNullOrEmpty(txtPassword.Password))
             {
                 textPassword.Visibility = Visibility.Collapsed;
             }
@@ -101,6 +165,66 @@ namespace wasteNOT
             else
             {
                 textUsername.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void btnSignup_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (ValidateInput())
+                {
+                    var user = new AllUser(txtEmail.Text, txtPhoneNum.Text, txtUsername.Text, txtPassword.Password);
+
+                    user.Insert();
+                    MessageBox.Show("Successfully signed up!");
+                    ClearInputs();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error registering User" + ex.Message);
+            }
+        }
+
+        private bool ValidateInput()
+        {
+            if (string.IsNullOrEmpty(txtEmail.Text) || string.IsNullOrEmpty(txtPassword.Password) || string.IsNullOrEmpty(txtPhoneNum.Text) || string.IsNullOrEmpty(txtUsername.Text))
+            {
+                MessageBox.Show("Please fill in all fields");
+                return false;
+            }
+            if (!txtEmail.Text.Contains('@') || !txtEmail.Text.Contains('.'))
+            {
+                MessageBox.Show("Please enter a valid email address");
+                return false;
+            }
+
+            if (txtPassword.Password.Length < 6)
+            {
+                MessageBox.Show("Password must be at least 6 characters long");
+                return false;
+            }
+            return true;
+        }
+
+        private void ClearInputs()
+        {
+            txtEmail.Text = string.Empty;
+            txtPassword.Password = string.Empty;
+            txtPhoneNum.Text = string.Empty;
+            txtUsername.Text = string.Empty;
+        }
+
+        private void txtPassword_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtPassword.Password))
+            {
+                txtPassword.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                txtPassword.Visibility = Visibility.Visible;
             }
         }
     }
