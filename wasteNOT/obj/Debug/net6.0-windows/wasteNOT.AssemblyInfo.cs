@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("wasteNOT")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dbc586c153e348c7a785acd09199fd47fa7b5fdb")]
 [assembly: System.Reflection.AssemblyProductAttribute("wasteNOT")]
 [assembly: System.Reflection.AssemblyTitleAttribute("wasteNOT")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

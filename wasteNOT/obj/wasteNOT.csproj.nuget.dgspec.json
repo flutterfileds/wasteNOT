@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jovit\\wasteNOT\\wasteNOT\\wasteNOT.csproj": {}
+    "D:\\COOLYEAH\\semester 5\\junpro\\wasteNOT2\\wasteNOT\\wasteNOT\\wasteNOT.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jovit\\wasteNOT\\wasteNOT\\wasteNOT.csproj": {
+    "D:\\COOLYEAH\\semester 5\\junpro\\wasteNOT2\\wasteNOT\\wasteNOT\\wasteNOT.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jovit\\wasteNOT\\wasteNOT\\wasteNOT.csproj",
+        "projectUniqueName": "D:\\COOLYEAH\\semester 5\\junpro\\wasteNOT2\\wasteNOT\\wasteNOT\\wasteNOT.csproj",
         "projectName": "wasteNOT",
-        "projectPath": "C:\\Users\\jovit\\wasteNOT\\wasteNOT\\wasteNOT.csproj",
-        "packagesPath": "C:\\Users\\jovit\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jovit\\wasteNOT\\wasteNOT\\obj\\",
+        "projectPath": "D:\\COOLYEAH\\semester 5\\junpro\\wasteNOT2\\wasteNOT\\wasteNOT\\wasteNOT.csproj",
+        "packagesPath": "C:\\Users\\Jhon Samuel\\.nuget\\packages\\",
+        "outputPath": "D:\\COOLYEAH\\semester 5\\junpro\\wasteNOT2\\wasteNOT\\wasteNOT\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jovit\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Jhon Samuel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,11 +34,22 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "Npgsql": {
+              "target": "Package",
+              "version": "[8.0.5, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -58,7 +69,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

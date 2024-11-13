@@ -66,15 +66,16 @@
                     <Grid Margin="7 9">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="auto" />
-                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="18*" />
+                            <ColumnDefinition Width="47*"/>
                         </Grid.ColumnDefinitions>
 
-                        <TextBlock x:Name="textPassword" Text="Password" MouseDown="textPassword_MouseDown" Style="{StaticResource textHint}"/>
-                        <TextBox x:Name="txtPassword" TextChanged="txtPassword_TextChanged" Style="{StaticResource textBox}"/>
+                        <TextBlock x:Name="textPassword" Text="Password" MouseDown="textPassword_MouseDown" Style="{StaticResource textHint}" Grid.ColumnSpan="3" Margin="10,0,0,0"/>
+                        <PasswordBox x:Name="txtPassword" PasswordChanged="txtPassword_PasswordChanged"  Style="{StaticResource textBox}" Grid.ColumnSpan="3"/>
                     </Grid>
                 </Border>
 
-                <Button x:Name="btnSignup" Content="Sign Up" Style="{StaticResource mainButton}"/>
+                <Button x:Name="btnSignup" Content="Sign Up" Style="{StaticResource mainButton}" Click="btnSignup_Click"/>
 
                 <Grid Margin="30" Width="250" VerticalAlignment="Center">
                     <Grid.ColumnDefinitions>

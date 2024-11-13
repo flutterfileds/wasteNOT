@@ -47,7 +47,7 @@
                         </Grid.ColumnDefinitions>
 
                         <TextBlock x:Name="textPassword" Text="Password" MouseDown="textPassword_MouseDown" Style="{StaticResource textHint}"/>
-                        <TextBox x:Name="txtPassword" TextChanged="txtPassword_PasswordChanged" Style="{StaticResource textBox}"/>
+                        <PasswordBox x:Name="txtPassword" PasswordChanged="txtPassword_PasswordChanged" Style="{StaticResource textBox}"/>
                     </Grid>
                 </Border>
 
