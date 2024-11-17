@@ -10,66 +10,154 @@
 
     <Grid Margin="10">
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="5*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Text="Shipping Address" Style="{StaticResource header1Text}" 
-                   VerticalAlignment="Center" Foreground="#0E78b5" Margin="20 0 20 0"/>
+        <TextBlock Text="Shipping Address" 
+                   Style="{StaticResource header1Text}" 
+                   VerticalAlignment="Center" 
+                   Foreground="#0E78b5" 
+                   Margin="20 0 20 0"/>
 
-        <Border Grid.Row="1" Background="#E4F0F7" Height="300" Width="625" CornerRadius="10">
+        <Border Grid.Row="1" 
+                Background="#E4F0F7" 
+                Height="300" 
+                Width="625" 
+                CornerRadius="10">
             <StackPanel Orientation="Vertical">
                 <StackPanel Orientation="Horizontal" Height="70" Margin="20">
                     <StackPanel Width="300">
-                        <TextBlock Text="Name" Style="{StaticResource formText}" 
-                            Margin="20 0 10 10"  Foreground="Black"/>
-                        <Border BorderBrush="#ACB0AF" BorderThickness="1" CornerRadius="5" Width="250" Height="30" HorizontalAlignment="Left" Margin="20 0 0 0">
-                            <TextBox Name="txtNameCust" Width="245" Height="25" Style="{StaticResource textBox}"/>
+                        <TextBlock Text="Name" 
+                                   Style="{StaticResource formText}" 
+                                   Margin="20 0 10 10"  
+                                   Foreground="Black"/>
+                        <Border BorderBrush="#ACB0AF" 
+                                BorderThickness="1" 
+                                CornerRadius="5" 
+                                Width="250" 
+                                Height="30" 
+                                HorizontalAlignment="Left" 
+                                Margin="20 0 0 0">
+                            <TextBox x:Name="txtNameCust" 
+                                     Width="245" 
+                                     Height="25" 
+                                     Style="{StaticResource textBox}"/>
                         </Border>
                     </StackPanel>
 
                     <StackPanel Width="300">
-                        <TextBlock Text="Phone Number" Style="{StaticResource formText}" 
-                            Margin="20 0 10 10"  Foreground="Black"/>
-                        <Border BorderBrush="#ACB0AF" BorderThickness="1" CornerRadius="5" Width="250" Height="30" HorizontalAlignment="Left" Margin="20 0 0 0">
-                            <TextBox Name="txtNumCust" Width="245" Height="25" Style="{StaticResource textBox}"/>
+                        <TextBlock Text="Phone Number" 
+                                   Style="{StaticResource formText}" 
+                                   Margin="20 0 10 10"  
+                                   Foreground="Black"/>
+                        <Border BorderBrush="#ACB0AF" 
+                                BorderThickness="1" 
+                                CornerRadius="5" 
+                                Width="250" 
+                                Height="30" 
+                                HorizontalAlignment="Left" 
+                                Margin="20 0 0 0">
+                            <TextBox x:Name="txtNumCust" 
+                                     Width="245" 
+                                     Height="25" 
+                                     Style="{StaticResource textBox}"/>
                         </Border>
                     </StackPanel>
-             
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal" Height="90" Margin="20 0">
                     <StackPanel>
-                        <TextBlock Text="Street Address" Style="{StaticResource formText}" 
-                                 Margin="20 0 10 10"  Foreground="Black"/>
-                        <Border BorderBrush="#ACB0AF" BorderThickness="1" CornerRadius="5" Width="550" Height="50" HorizontalAlignment="Left" Margin="20 0 0 0">
-                            <TextBox Name="txtStreetAdd" Width="545" Height="45" Style="{StaticResource textBox}"
-                                     TextWrapping="WrapWithOverflow" TextAlignment="Left"/>
+                        <TextBlock Text="Street Address" 
+                                   Style="{StaticResource formText}" 
+                                   Margin="20 0 10 10"  
+                                   Foreground="Black"/>
+                        <Border BorderBrush="#ACB0AF" 
+                                BorderThickness="1" 
+                                CornerRadius="5" 
+                                Width="550" 
+                                Height="50" 
+                                HorizontalAlignment="Left" 
+                                Margin="20 0 0 0">
+                            <TextBox x:Name="txtStreetAdd" 
+                                     Width="545" 
+                                     Height="45" 
+                                     Style="{StaticResource textBox}"
+                                     TextWrapping="WrapWithOverflow" 
+                                     TextAlignment="Left"/>
                         </Border>
                     </StackPanel>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal" Height="70" Margin="20 20">
                     <StackPanel Width="300">
-                        <TextBlock Text="City" Style="{StaticResource formText}" 
-                             Margin="20 0 10 10"  Foreground="Black"/>
-                        <Border BorderBrush="#ACB0AF" BorderThickness="1" CornerRadius="5" Width="250" Height="30" HorizontalAlignment="Left" Margin="20 0 0 0">
-                            <TextBox Name="txtCity" Width="245" Height="25" Style="{StaticResource textBox}"/>
+                        <TextBlock Text="City" 
+                                   Style="{StaticResource formText}" 
+                                   Margin="20 0 10 10"  
+                                   Foreground="Black"/>
+                        <Border BorderBrush="#ACB0AF" 
+                                BorderThickness="1" 
+                                CornerRadius="5" 
+                                Width="250" 
+                                Height="30" 
+                                HorizontalAlignment="Left" 
+                                Margin="20 0 0 0">
+                            <TextBox x:Name="txtCity" 
+                                     Width="245" 
+                                     Height="25" 
+                                     Style="{StaticResource textBox}"/>
                         </Border>
                     </StackPanel>
 
                     <StackPanel Width="300">
-                        <TextBlock Text="Postal Code" Style="{StaticResource formText}" 
-                            Margin="20 0 10 10"  Foreground="Black"/>
-                        <Border BorderBrush="#ACB0AF" BorderThickness="1" CornerRadius="5" Width="250" Height="30" HorizontalAlignment="Left" Margin="20 0 0 0">
-                            <TextBox Name="txtPostcode" Width="245" Height="25" Style="{StaticResource textBox}"/>
+                        <TextBlock Text="Postal Code" 
+                                   Style="{StaticResource formText}" 
+                                   Margin="20 0 10 10"  
+                                   Foreground="Black"/>
+                        <Border BorderBrush="#ACB0AF" 
+                                BorderThickness="1" 
+                                CornerRadius="5" 
+                                Width="250" 
+                                Height="30" 
+                                HorizontalAlignment="Left" 
+                                Margin="20 0 0 0">
+                            <TextBox x:Name="txtPostcode" 
+                                     Width="245" 
+                                     Height="25" 
+                                     Style="{StaticResource textBox}"/>
                         </Border>
                     </StackPanel>
                 </StackPanel>
             </StackPanel>
         </Border>
 
-        <Button Grid.Row="2" x:Name="btnOKShipping" Content="OK" Style="{StaticResource saveButton}" Click="btnOKShipping_Click" />
+        <StackPanel Grid.Row="2" 
+                    Orientation="Horizontal" 
+                    HorizontalAlignment="Center" 
+                    Margin="0,10,0,0">
+            <TextBlock Text="Total Order Amount: " 
+                       Style="{StaticResource formText}" 
+                       VerticalAlignment="Center" 
+                       Margin="0,0,10,0"/>
+            <TextBlock x:Name="txtTotalAmount" 
+                       Style="{StaticResource formText}" 
+                       VerticalAlignment="Center" 
+                       Foreground="#0E78b5"/>
+        </StackPanel>
+
+        <Button Grid.Row="3" 
+                x:Name="btnProceedToPayment" 
+                Content="Proceed to Payment" 
+                Style="{StaticResource saveButton}" 
+                Click="btnProceedToPayment_Click" 
+                Margin="275,10,305,0"/>
+        <Button Grid.Row="2" 
+        x:Name="btnAdd" 
+        Content="Add" 
+        Style="{StaticResource saveButton}" 
+        Click="btnAddAdress_Click"  
+        Margin="542,20,38,21" Grid.RowSpan="2" Width="100"/>
     </Grid>
 </Page>
