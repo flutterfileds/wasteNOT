@@ -1,60 +1,125 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.Windows.Data;
 
 namespace wasteNOT
 {
-    /// <summary>
-    /// Interaction logic for History.xaml
-    /// </summary>
+    public class Order
+    {
+        public int OrderId { get; set; }
+        public int UserId { get; set; }
+        public int ShippingId { get; set; }
+        public DateTime OrderDate { get; set; }
+        public string Status { get; set; }
+        public decimal OrderTotal { get; set; }
+    }
+
+    public class StatusToColorConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        {
+            return (value as string)?.ToLower() switch
+            {
+                "pending" => new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FFA500")),
+                "in progress" => new SolidColorBrush((Color)ColorConverter.ConvertFromString("#007BFF")),
+                "shipped" => new SolidColorBrush((Color)ColorConverter.ConvertFromString("#17A2B8")),
+                "completed" => new SolidColorBrush((Color)ColorConverter.ConvertFromString("#28A745")),
+                _ => new SolidColorBrush((Color)ColorConverter.ConvertFromString("#6C757D"))
+            };
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
     public partial class History : Page
     {
+        private List<Order> orders;
+
         public History()
         {
             InitializeComponent();
+            LoadOrders();
+
+            // Add search functionality
+            
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void LoadOrders()
         {
-
-        }
-
-        private void btnSearch_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btnAccount_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new Uri("Pages/Settings.xaml", UriKind.Relative));
-        }
-
-        private void textSearch_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            txtSearch.Focus();
-        }
-
-        private void txtSearch_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            if (!string.IsNullOrEmpty(txtSearch.Text) && txtSearch.Text.Length > 0)
+            try
             {
-                textSearch.Visibility = Visibility.Collapsed;
+                orders = new List<Order>();
+                using (var connection = new NpgsqlConnection(ConnectionString.GetConnectionString()))
+                {
+                    connection.Open();
+                    using (var cmd = new NpgsqlCommand("SELECT * FROM public.order ORDER BY order_date DESC", connection))
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            orders.Add(new Order
+                            {
+                                OrderId = reader.GetInt32(reader.GetOrdinal("order_id")),
+                                UserId = reader.GetInt32(reader.GetOrdinal("user_id")),
+                                ShippingId = reader.GetInt32(reader.GetOrdinal("shipping_id")),
+                                OrderDate = reader.GetDateTime(reader.GetOrdinal("order_date")),
+                                Status = reader.GetString(reader.GetOrdinal("status")),
+                                OrderTotal = reader.GetDecimal(reader.GetOrdinal("order_total"))
+                            });
+                        }
+                    }
+                }
+                OrdersList.ItemsSource = orders;
             }
-            else
+            catch (Exception ex)
             {
-                textSearch.Visibility = Visibility.Visible;
+                MessageBox.Show($"Error loading orders: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+
+        private void textSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            var searchText = txtSearch.Text.ToLower();
+
+            if (string.IsNullOrWhiteSpace(searchText))
+            {
+                OrdersList.ItemsSource = orders;
+                return;
+            }
+
+            var filteredOrders = orders.FindAll(o =>
+                o.OrderId.ToString().Contains(searchText) ||
+                o.ShippingId.ToString().Contains(searchText) ||
+                o.Status.ToLower().Contains(searchText)
+            );
+
+            OrdersList.ItemsSource = filteredOrders;
+        }
+
+        private void ViewDetails_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button button && button.Tag is int orderId)
+            {
+                var selectedOrder = orders.Find(o => o.OrderId == orderId);
+                if (selectedOrder != null)
+                {
+                    // Navigate to order details page - implement as needed
+                    // NavigationService.Navigate(new OrderDetails(selectedOrder));
+                    MessageBox.Show($"Viewing details for Order #{orderId}");
+                }
+            }
+        }
+
+        private void textSearch_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+
         }
     }
 }

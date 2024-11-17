@@ -33,12 +33,12 @@
                     </Grid.ColumnDefinitions>
 
                     <Grid>
-                        <TextBlock x:Name="textSearch" Text="Search" MouseDown="textSearch_MouseDown" Style="{StaticResource textHint}"/>
-                        <TextBox x:Name="txtSearch" TextChanged="txtSearch_TextChanged" Style="{StaticResource textBox}" />
+                        <TextBlock x:Name="textSearch" Text="Search" Style="{StaticResource textHint}"/>
+                        <TextBox x:Name="txtSearch" Style="{StaticResource textBox}" />
                     </Grid>
 
                     <Border Grid.Column="1">
-                        <Button x:Name="btnSearch" BorderBrush="Transparent" Background="Transparent" Click="btnSearch_Click">
+                        <Button x:Name="btnSearch" BorderBrush="Transparent" Background="Transparent" >
                             <Image Source="pack://application:,,,/Icons/search.png" Width="25" Height="25"/>
                         </Button>
                     </Border>
@@ -46,7 +46,7 @@
             </Border>
 
             <Border Grid.Column="2" Height="50" Width="50">
-                <Button x:Name="btnAccount" BorderBrush="Transparent" Background="Transparent" Click="btnAccount_Click">
+                <Button x:Name="btnAccount" BorderBrush="Transparent" Background="Transparent" >
                     <Image Source="pack://application:,,,/Icons/account.png" Width="30" Height="30"/>
                 </Button>
             </Border>        
@@ -54,10 +54,10 @@
 
         <Grid Grid.Row="1" Margin="20 0 20 0">
             <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left" Height="30">
-                <Button Content="All" Click="Button_Click" Style="{StaticResource filterButton}"/>
-                <Button Content="In Progress" Click="Button_Click" Style="{StaticResource filterButton}"/>
-                <Button Content="Shipped" Click="Button_Click" Style="{StaticResource filterButton}"/>
-                <Button Content="Completed" Click="Button_Click" Style="{StaticResource filterButton}"/>
+                <Button Content="All"  Style="{StaticResource filterButton}"/>
+                <Button Content="In Progress"  Style="{StaticResource filterButton}"/>
+                <Button Content="Shipped" Style="{StaticResource filterButton}"/>
+                <Button Content="Completed" Style="{StaticResource filterButton}"/>
             </StackPanel>
         </Grid>
 
@@ -70,5 +70,79 @@
                 </ItemsControl.ItemsPanel>
             </ItemsControl>
         </Grid>
+        <!-- Orders List -->
+        <ListView Grid.Row="1" 
+                  x:Name="OrdersList"
+                  Margin="30"
+                  Background="Transparent"
+                  BorderThickness="0">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border Background="White" 
+                            CornerRadius="10" 
+                            Padding="20" 
+                            Margin="0,5">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <!-- Order ID and Date -->
+                            <StackPanel>
+                                <TextBlock Text="{Binding OrderId, StringFormat='Order #{0}'}"
+                                           FontWeight="SemiBold"
+                                           FontSize="16"/>
+                                <TextBlock Text="{Binding OrderDate, StringFormat='{}{0:dd MMM yyyy}'}"
+                                           Foreground="#666666"
+                                           Margin="0,5,0,0"/>
+                            </StackPanel>
+
+                            <!-- Total Amount -->
+                            <TextBlock Grid.Column="1" 
+                                       Text="{Binding OrderTotal, StringFormat='Rp {0:N0}'}"
+                                       VerticalAlignment="Center"/>
+
+                            <!-- Shipping ID -->
+                            <TextBlock Grid.Column="2"
+                                       Text="{Binding ShippingId, StringFormat='Ship #{0}'}"
+                                       VerticalAlignment="Center"/>
+
+                            <!-- Status -->
+                            <Border Grid.Column="3"
+                                    Background="{Binding Status}"
+                                    CornerRadius="15"
+                                    Padding="15,5"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Center">
+                                <TextBlock Text="{Binding Status}"
+                                           Foreground="White"/>
+                            </Border>
+
+                            <!-- View Details Button -->
+                            <Button Grid.Column="4"
+                                    Content="View Details"
+                                    Padding="15,8"
+                                    Background="#0E78B5"
+                                    Foreground="White"
+                                    BorderThickness="0"
+                                    Click="ViewDetails_Click"
+                                    Tag="{Binding OrderId}"/>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="BorderThickness" Value="0"/>
+                    <Setter Property="Padding" Value="0"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+        </ListView>
     </Grid>
 </Page>
