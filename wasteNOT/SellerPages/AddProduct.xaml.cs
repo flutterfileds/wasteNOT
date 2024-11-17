@@ -22,7 +22,7 @@ namespace wasteNOT.SellerPages
     /// </summary>
     /// 
 
-    public abstract class Product {
+    public abstract partial class ProductBase {
         public string Name { get; set; }
         public string Email { get; set; }
 
@@ -32,7 +32,7 @@ namespace wasteNOT.SellerPages
 
         protected readonly string connectionString = ConnectionString.GetConnectionString();
 
-        public Product(string name, string type, int price, string description, string email)
+        public ProductBase(string name, string type, int price, string description, string email)
         {
             Name = name;
             Price = price;
@@ -46,7 +46,7 @@ namespace wasteNOT.SellerPages
 
 
     }
-    public class AddNewProduct : Product
+    public class AddNewProduct : ProductBase
     {
         public AddNewProduct(string name, string type, int price, string description, string email) : base(name, type, price, description, email)
         {

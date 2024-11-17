@@ -23,18 +23,19 @@
             <TextBlock Text="My Products" Style="{StaticResource header1Text}" 
                    VerticalAlignment="Center" Foreground="#0E78b5"/>
 
-            <Button Grid.Column="1" x:Name="btnAddProduct" Content="+ Add New Product" Click="btnAddProduct_Click"
+            <Button Grid.Column="1" x:Name="btnAddProduct" Content="Show my product" Click="btnAddProduct_Click"
                 HorizontalAlignment="Right" MinWidth="200"  MaxWidth="300" Style="{StaticResource chButton}"/>
         </Grid>
 
         <StackPanel Grid.Row="1" VerticalAlignment="Top">
             <DataGrid x:Name="dgvProducts"  ItemsSource="{Binding Products}" AutoGenerateColumns="False" CanUserAddRows="False" Margin="10">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Product" Binding="{Binding ProductName}" Width="*"/>
-                    <DataGridTextColumn Header="Sales" Binding="{Binding Sales}" Width="*"/>
-                    <DataGridTextColumn Header="Price" Binding="{Binding Price}" Width="*"/>
-                    <DataGridTextColumn Header="Stock" Binding="{Binding Stock}" Width="*"/>
+                    <DataGridTextColumn Header="UserID" Binding="{Binding UserID}" Width="*"/>
+                    <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="*"/>
+                    <DataGridTextColumn Header="Type" Binding="{Binding Type}" Width="*"/>
+                    <DataGridTextColumn Header="Desc" Binding="{Binding Description}" Width="*"/>
                     <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="*"/>
+                    <DataGridTextColumn Header="Price" Binding="{Binding Price}" Width="*"/>
                 </DataGrid.Columns>
             </DataGrid>
         </StackPanel>

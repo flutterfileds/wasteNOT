@@ -20,9 +20,23 @@ namespace wasteNOT.Pages
     /// </summary>
     public partial class Confirmed : Page
     {
-        public Confirmed()
+        private int _orderId;
+
+        // New constructor that accepts order ID
+        public Confirmed(int orderId)
         {
             InitializeComponent();
+
+            _orderId = orderId;
+
+            // Set the order ID in the UI
+            SetOrderDetails();
+        }
+
+        private void SetOrderDetails()
+        {
+            // Update the order ID text
+            txtOrderId.Text = $"Thank You for Ordering! Your Order ID is #{_orderId}";
         }
 
         private void btnBack2h_Click(object sender, RoutedEventArgs e)

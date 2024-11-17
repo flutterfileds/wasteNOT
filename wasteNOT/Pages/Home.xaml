@@ -69,7 +69,68 @@
                 <Button Content="Linen" Click="Button_Click" Style="{StaticResource filterButton}"/>
             </StackPanel>
         </Grid>
+        <!-- Products Grid -->
+        <ScrollViewer Grid.Row="2" Margin="20 0 20 0">
+            <ItemsControl x:Name="ProductsGrid">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border Margin="0 0 20 20" Width="180" Height="280" Background="White" 
+                CornerRadius="8" BorderThickness="0">
+                            <StackPanel>
+                                <Image Source="{Binding ImageSource}" Height="140" Stretch="UniformToFill"/>
+                                <StackPanel Margin="10">
+                                    <TextBlock Text="{Binding Name}" FontWeight="SemiBold" Margin="0 0 0 5"/>
+                                    <TextBlock Text="{Binding FormattedPrice}" Foreground="#0E78B5"/>
+                                    <TextBlock Text="{Binding Category}" Foreground="#6D7A8C" 
+                             FontSize="12" Margin="0 2"/>
+                                    <TextBlock Text="{Binding Status}" Foreground="#6D7A8C" 
+                             FontSize="12" Margin="0 2"/>
 
+                                    <!-- Quantity Control Panel -->
+                                    <Grid Margin="0,10,0,0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <TextBlock Text="Quantity:" VerticalAlignment="Center"/>
+
+                                        <Button Grid.Column="1" 
+                                Content="-"
+                                Width="30"
+                                Height="30"
+                                Margin="5,0"
+                                Click="btnDecrease_Click"
+                                Style="{StaticResource filterButton}"/>
+
+                                        <TextBlock Grid.Column="2" 
+                                   Text="{Binding Quantity}"
+                                   Width="30"
+                                   TextAlignment="Center"
+                                   VerticalAlignment="Center"/>
+
+                                        <Button Grid.Column="3" 
+                                Content="+"
+                                Width="30"
+                                Height="30"
+                                Margin="5,0"
+                                Click="btnIncrease_Click"
+                                Style="{StaticResource filterButton}"/>
+                                    </Grid>
+                                </StackPanel>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
         <Grid Grid.Row="2"  Margin="20 0 20 0">
         </Grid>
     </Grid>

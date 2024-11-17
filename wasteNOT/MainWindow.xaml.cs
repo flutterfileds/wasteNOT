@@ -27,7 +27,9 @@ namespace wasteNOT
 
         private void btnCart_Click(object sender, RoutedEventArgs e)
         {
-            PagesNavigation.Navigate(new System.Uri("Pages/Cart.xaml", UriKind.RelativeOrAbsolute));
+            // Assuming you have a way to get the current user ID
+            int currentUserId = UserSession.CurrentUserId; // Replace with your actual method of getting user ID
+            PagesNavigation.Navigate(new wasteNOT.Pages.Cart(currentUserId));
         }
 
         private void btnHome_Click(object sender, RoutedEventArgs e)
