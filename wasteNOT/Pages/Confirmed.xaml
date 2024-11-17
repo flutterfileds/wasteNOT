@@ -14,7 +14,8 @@
 
             <TextBlock Text="Order Confirmed" Style="{StaticResource header1Text}" Foreground="#0D1625" TextAlignment="Center"/>
 
-            <TextBlock Text="Thank You for Ordering! Your Order ID is #1" 
+            <TextBlock x:Name="txtOrderId" 
+                       Text="Thank You for Ordering! Your Order ID is #1" 
                        FontSize="16" Foreground="#6D7A8C" TextAlignment="Center" Margin="10" />
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="20">
@@ -23,7 +24,6 @@
                 <Button x:Name="btnBack2h" Content="Back to Home" Click="btnBack2h_Click"
                         Width="200" Margin="20" Style="{StaticResource chButton}"/>
             </StackPanel>
-
         </StackPanel>
     </Grid>
 </Page>
