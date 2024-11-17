@@ -39,6 +39,10 @@ namespace wasteNOT
 
         public abstract void Insert();
 
+        public abstract bool ValidateInput();
+
+        public abstract void ClearInputs();
+
         protected string HashPassword(string password)
         {
             using (SHA256 sHA256 = SHA256.Create())
@@ -60,6 +64,8 @@ namespace wasteNOT
     {
         public AllUser(string email, string phonenum, string name, string password) : base(email, phonenum, name, password) { }
 
+
+
         public override void Insert()
         {
             using (var connection = new NpgsqlConnection(connectionString))
@@ -77,8 +83,37 @@ namespace wasteNOT
                     command.ExecuteNonQuery();
                 }
             }
+
+        }
+
+        public override bool ValidateInput()
+        {
+            if (string.IsNullOrEmpty(Email) || string.IsNullOrEmpty(PhoneNum) || string.IsNullOrEmpty(Name) || string.IsNullOrEmpty(Password))
+            {
+                MessageBox.Show("Please fill in all fields");
+                return false;
+            }
+            if (!Email.Contains('@') || !Email.Contains('.'))
+            {
+                MessageBox.Show("Please enter a valid email address");
+                return false;
+            }
+
+            if (Password.Length < 6)
+            {
+                MessageBox.Show("Password must be at least 6 characters long");
+                return false;
+            }
+            return true;
+        }
+
+        public override  void ClearInputs()
+        {
+            throw new NotImplementedException();
         }
     }
+        
+   
     public partial class SignUpWindow : Window
     {
         public SignUpWindow()
@@ -122,18 +157,7 @@ namespace wasteNOT
             txtPassword.Focus();
         }
 
-        private void txtPassword_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            if (!string.IsNullOrEmpty(txtPassword.Password))
-            {
-                textPassword.Visibility = Visibility.Collapsed;
-            }
-            else
-            {
-                textPassword.Visibility = Visibility.Visible;
-            }
-        }
-
+        
         private void txtPhoneNum_TextChanged(object sender, TextChangedEventArgs e)
         {
             if (!string.IsNullOrEmpty(txtPhoneNum.Text))
@@ -187,7 +211,7 @@ namespace wasteNOT
             }
         }
 
-        private bool ValidateInput()
+        public  bool ValidateInput()
         {
             if (string.IsNullOrEmpty(txtEmail.Text) || string.IsNullOrEmpty(txtPassword.Password) || string.IsNullOrEmpty(txtPhoneNum.Text) || string.IsNullOrEmpty(txtUsername.Text))
             {
@@ -208,7 +232,7 @@ namespace wasteNOT
             return true;
         }
 
-        private void ClearInputs()
+        public void ClearInputs()
         {
             txtEmail.Text = string.Empty;
             txtPassword.Password = string.Empty;
@@ -220,11 +244,11 @@ namespace wasteNOT
         {
             if (!string.IsNullOrEmpty(txtPassword.Password))
             {
-                txtPassword.Visibility = Visibility.Collapsed;
+                textPassword.Visibility = Visibility.Collapsed;
             }
             else
             {
-                txtPassword.Visibility = Visibility.Visible;
+                textPassword.Visibility = Visibility.Visible;
             }
         }
     }
