@@ -61,7 +61,7 @@ namespace wasteNOT.SellerPages
                 @Price,
                 @Type,
                 @Description,
-                (SELECT user_id FROM public.""user"" WHERE user_email = @Email )";
+                (SELECT seller_id FROM public.""seller"" WHERE seller_email = @Email )";
 
                 using (var command = new NpgsqlCommand(query, connection)) { 
                 command.Parameters.AddWithValue("@Name", Name);

@@ -21,6 +21,7 @@ namespace wasteNOT
                     throw new InvalidOperationException("User is not logged in");
                 return _currentUserId.Value;
             }
+
             set => _currentUserId = value;
         }
 

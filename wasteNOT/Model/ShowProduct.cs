@@ -42,7 +42,7 @@ namespace wasteNOT.Model
                     FROM item i
                     LEFT JOIN cart c ON i.item_id = c.item_id 
                     AND c.user_id = @userId
-                    WHERE i.status = 'available'::item_status";
+                    WHERE i.status = 'available'::item_status AND i.seller_id!=@userId";
 
                     cmd.Parameters.AddWithValue("@userId", GetCurrentUserId());
 

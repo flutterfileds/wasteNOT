@@ -84,6 +84,22 @@ namespace wasteNOT
                 }
             }
 
+            using (var connection2 = new NpgsqlConnection(connectionString))
+            {
+                string query = @"INSERT INTO public.""seller"" (seller_email, seller_phone, seller_name, seller_password) VALUES (@Email, @Phone, @Name, @Password)";
+
+                using (var command = new NpgsqlCommand(query, connection2))
+                {
+                    command.Parameters.AddWithValue("@Email", Email);
+                    command.Parameters.AddWithValue("@Phone", PhoneNum);
+                    command.Parameters.AddWithValue("@Name", Name);
+                    command.Parameters.AddWithValue("@Password", Password);
+
+                    connection2.Open();
+                    command.ExecuteNonQuery();
+                }
+            }
+
         }
 
         public override bool ValidateInput()
