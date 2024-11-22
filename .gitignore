@@ -22,3 +22,4 @@ obj/
 .DS_Store
 Thumbs.db
 ConnectionString.cs
+/wasteNOT/ConnectionString.cs
