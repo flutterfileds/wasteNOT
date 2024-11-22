@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,14 +20,37 @@ namespace wasteNOT.Pages
     /// <summary>
     /// Interaction logic for Home.xaml
     /// </summary>
-    public partial class Home : Page
+    public partial class Home : Page, INotifyPropertyChanged
     {
+        private string _welcomeMessage;
+        public string WelcomeMessage
+        {
+            get => _welcomeMessage;
+            set
+            {
+                if (_welcomeMessage != value)
+                {
+                    _welcomeMessage = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(WelcomeMessage)));
+                }
+            }
+        }
+
         private readonly ShowProductAccess _productData;
+
+        public event PropertyChangedEventHandler PropertyChanged;
         public Home()
         {
             InitializeComponent();
             _productData = new ShowProductAccess();
+            UpdateWelcomeMessage();
             LoadProducts();
+        }
+
+        private void UpdateWelcomeMessage()
+        {
+            string username = UserSession.CurrentUserName ?? "Guest";
+            WelcomeMessage = $"Welcome {username}!";
         }
 
         private void LoadProducts()

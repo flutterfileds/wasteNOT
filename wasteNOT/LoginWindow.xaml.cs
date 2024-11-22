@@ -64,11 +64,11 @@ namespace wasteNOT
                 }
                 try
                 {
-                    var (isValid, userId) = ValidateAccount(email, password);
+                    var (isValid, userId, userName) = ValidateAccount(email, password);
                     if (isValid)
                     {
                         UserSession.UserEmail = email;
-                        UserSession.Login(userId);
+                        UserSession.Login(userId,userName);
                         MessageBox.Show("Successfully Logged In");
 
                         // Create an instance of MainWindow
@@ -92,7 +92,7 @@ namespace wasteNOT
             }
         }
 
-        private (bool isValid, int userId) ValidateAccount(string email, string password)
+        private (bool isValid, int userId, string userName) ValidateAccount(string email, string password)
         {
             using (var connection = new NpgsqlConnection(connectionString))
             {
@@ -102,7 +102,7 @@ namespace wasteNOT
                 using (var cmd = new NpgsqlCommand())
                 {
                     cmd.Connection = connection;
-                    cmd.CommandText = "SELECT user_id FROM public.\"user\" WHERE user_email = @Email AND user_password = @Password";
+                    cmd.CommandText = "SELECT user_id, user_name FROM public.\"user\" WHERE user_email = @Email AND user_password = @Password";
                     cmd.Parameters.AddWithValue("Email", email);
                     cmd.Parameters.AddWithValue("Password", hashedPassword);
 
@@ -111,9 +111,10 @@ namespace wasteNOT
                         if (reader.Read())
                         {
                             int userId = reader.GetInt32(0); // Get the user_id from the first column
-                            return (true, userId);
+                            string userName = reader.GetString(1); // Get the user_name from the second column
+                            return (true, userId, userName);
                         }
-                        return (false, 0);
+                        return (false, 0, "");
                     }
                 }
             }

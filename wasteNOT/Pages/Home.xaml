@@ -29,7 +29,7 @@
                     <RowDefinition Height="1.5*"/>
                 </Grid.RowDefinitions>
 
-                <TextBlock Text="Welcome Anna!" Style="{StaticResource header2Text}" VerticalAlignment="Center" Foreground="#0E78b5"/>
+                <TextBlock Text="Welcome" Style="{StaticResource header2Text}" VerticalAlignment="Center" Foreground="#0E78b5"/>
                 <TextBlock Grid.Row="1" Text="What do you need?" Style="{StaticResource normalText}" VerticalAlignment="Top" Foreground="#6D7A8C"/>
             </Grid>
 
