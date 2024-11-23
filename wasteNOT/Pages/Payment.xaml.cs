@@ -47,18 +47,16 @@ namespace wasteNOT.Pages
                     {
                         var orderQuery = @"
                     INSERT INTO ""order"" 
-                    (user_id, shipping_id, order_date, status, order_total) 
+                    (user_id, shipping_id, order_total) 
                     VALUES 
-                    (@UserId, @ShippingId, @OrderDate, @Status, @Total)
+                    (@UserId, @ShippingId, @Total)
                     RETURNING order_id";
 
                         int orderId;
                         using (var command = new NpgsqlCommand(orderQuery, connection, transaction))
                         {
                             command.Parameters.AddWithValue("@UserId", _userId);
-                            command.Parameters.AddWithValue("@ShippingId", _shippingId);
-                            command.Parameters.AddWithValue("@OrderDate", DateTime.Now);
-                            command.Parameters.AddWithValue("@Status", "Pending"); // Use enum value
+                            command.Parameters.AddWithValue("@ShippingId", _shippingId); // Use enum value
                             command.Parameters.AddWithValue("@Total", (int)_totalAmount);
 
                             orderId = Convert.ToInt32(command.ExecuteScalar());

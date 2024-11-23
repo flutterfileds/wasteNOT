@@ -69,7 +69,6 @@ namespace wasteNOT
                                 OrderId = reader.GetInt32(reader.GetOrdinal("order_id")),
                                 UserId = reader.GetInt32(reader.GetOrdinal("user_id")),
                                 ShippingId = reader.GetInt32(reader.GetOrdinal("shipping_id")),
-                                OrderDate = reader.GetDateTime(reader.GetOrdinal("order_date")),
                                 Status = reader.GetString(reader.GetOrdinal("status")),
                                 OrderTotal = reader.GetDecimal(reader.GetOrdinal("order_total"))
                             });
