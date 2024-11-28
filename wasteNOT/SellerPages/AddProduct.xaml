@@ -76,9 +76,11 @@
                 <!-- Photo Row -->
                 <TextBlock Text="Product Photos" Grid.Row="4" Grid.Column="0" Style="{StaticResource formText}" 
                     VerticalAlignment="Top" Margin="50,10,0,0"/>
-                <Button x:Name="btnProductPhoto" Content="Add Product Photos" Grid.Row="4" Grid.Column="1" Margin="0 10"
-                    HorizontalAlignment="Center" Width="300" Click="btnProductPhoto_Click"/>
-
+                <StackPanel Grid.Row="4" Grid.Column="1" Orientation="Vertical" Margin="0,10">
+                    <Button x:Name="btnProductPhoto" Content="Select Photo" Click="btnProductPhoto_Click" 
+            HorizontalAlignment="Center" Width="200" />
+                    <TextBlock x:Name="lblPhotoName" Text="No photo selected" Margin="5,0,0,0" />
+                </StackPanel>
                 <Button x:Name="btnSaveProduct" Grid.Row="5" Grid.Column="1" 
                         Content="Save" Style="{StaticResource saveButton}" Click="btnSaveProduct_Click"/>
             </Grid>
