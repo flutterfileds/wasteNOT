@@ -85,7 +85,7 @@ namespace wasteNOT
 
         private void textSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
-            var searchText = txtSearch.Text.ToLower();
+            string searchText = txtSearch.Text.ToLower();
 
             if (string.IsNullOrWhiteSpace(searchText))
             {

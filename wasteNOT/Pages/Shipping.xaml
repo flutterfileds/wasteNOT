@@ -133,31 +133,11 @@
             </StackPanel>
         </Border>
 
-        <StackPanel Grid.Row="2" 
-                    Orientation="Horizontal" 
-                    HorizontalAlignment="Center" 
-                    Margin="0,10,0,0">
-            <TextBlock Text="Total Order Amount: " 
-                       Style="{StaticResource formText}" 
-                       VerticalAlignment="Center" 
-                       Margin="0,0,10,0"/>
-            <TextBlock x:Name="txtTotalAmount" 
-                       Style="{StaticResource formText}" 
-                       VerticalAlignment="Center" 
-                       Foreground="#0E78b5"/>
-        </StackPanel>
-
         <Button Grid.Row="3" 
                 x:Name="btnProceedToPayment" 
                 Content="Proceed to Payment" 
                 Style="{StaticResource saveButton}" 
                 Click="btnProceedToPayment_Click" 
                 Margin="275,10,305,0"/>
-        <Button Grid.Row="2" 
-        x:Name="btnAdd" 
-        Content="Add" 
-        Style="{StaticResource saveButton}" 
-        Click="btnAddAdress_Click"  
-        Margin="542,20,38,21" Grid.RowSpan="2" Width="100"/>
     </Grid>
 </Page>

@@ -36,7 +36,7 @@ namespace wasteNOT.Pages
             // Load user and shipping details
             LoadUserDetails();
             LoadExistingAddress();
-            PopulateShippingOptions();
+
         }
 
         private void LoadUserDetails()
@@ -71,13 +71,6 @@ namespace wasteNOT.Pages
             {
                 MessageBox.Show($"Error loading user details: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-        }
-
-        private void PopulateShippingOptions()
-        {
-            // Populate shipping options, calculate shipping costs, etc.
-            // Display total order amount
-            txtTotalAmount.Text = $"Rp{_totalOrderAmount:N2}";
         }
 
         private void btnProceedToPayment_Click(object sender, RoutedEventArgs e)
